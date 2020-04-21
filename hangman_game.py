@@ -23,6 +23,11 @@ Print
 '''
 
 # pseudo code and definitions
+import random
+
+import hangman_index
+
+from hangman_index import (words, hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6)
 
 '''
 import random to select a random word from a tuple
@@ -36,26 +41,61 @@ create another while loop to break out of when the word is guessed or if the tri
 in the 2nd while loop make sure to += 1 to the tries
 
 '''
+keep_running = True
+while keep_running:
+    rules = str(input("Hangman game\n"
+                      "Would you like to see the rules? (y/n)"))
 
+    if rules == "y":
+        print("Rules: A random word is selected and you get to see how many characters there are in the word.\n"
+              "       Guess a letter or the complete word and see if you got it right.\n"
+              "       If you guess a letter and it is in the word, it will be added to the character line.\n"
+              "       Also, if you guess wrong a portion of the hangman is drawn and you get to try again.\n"
+              "       If you make 6 wrong guesses and the hung man is fully drawn, you lose!\n"
+              "Okay! lets begin!")
+    else:
+        print("Okay! lets begin!")
 
-import random
+    ran_word = str(random.choice(words))
 
-import hangman_index
+    guesses = ""
+    turns = 6
 
-from hangman_index import words, hangman
+    print(hangman0)
 
-rules = str(input("Hangman game"
-      "Would you like to see the rules? (y/n)"))
+    while turns > 0:
+        counter = 0
+        for char in ran_word:
+            if char in guesses:
+                print(char)
+            else:
+                print("_")
+                counter += 1
+        if counter == 0:
+            print("You Win!!")
+            break
 
-if rules == "y":
-    print("Rules: A random word is selected and you get to see how many characters there are in the word.\n"
-      "       Guess a letter or the complete word and see if you got it right.\n"
-      "       If you guess a letter and it is in the word, it will be added to the character line.\n"
-      "       Also, if you guess wrong a portion of the hangman is drawn and you get to try again.\n"
-      "       If you make 8 wrong guesses and the hung man is fully drawn, you lose!\n"
-      "Okay! lets begin!")
-else:
-    print("Okay! lets begin!")
+        guess = input("Guess a character: ")
 
+        guesses += guess
 
-
+        if guess not in ran_word:
+            turns -= 1
+            if turns == 5:
+                print(hangman1)
+            elif turns == 4:
+                print(hangman2)
+            elif turns == 3:
+                print(hangman3)
+            elif turns == 2:
+                print(hangman4)
+            elif turns == 1:
+                print(hangman5)
+            else:
+                print(hangman6)
+            print("Wrong, you have", + turns, "more guesses")
+            if turns == 0:
+                print("You Lose!!\nIt was: " + ran_word)
+    retry = input("Would you like to try again? (y/n): ")
+    if retry != "y":
+        break

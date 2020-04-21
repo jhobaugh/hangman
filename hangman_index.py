@@ -1,11 +1,10 @@
+words = ("abruptly", "absurd", "abyss", "affix", "askew", "avenue", "awkward", "axiom", "azure",
+         "bagpipes", "bandwagon", "banjo", "bayou", "beekeeper",
+         "bikini", "blitz", "blizzard", "boggle", "bookworm", "boxcar", "boxful", "buckaroo", "buffalo", "buffoon",
+         "buxom", "buzzard", "buzzing",
+         "buzzwords", "caliph", "cobweb", "cockiness", "croquet", "crypt", "curacao", "cycle", "daiquiri", "dirndl", "disavow", "dizzying", "duplex")
 
-words = ("abruptly", "absurd", "abyss", "affix", "askew", "avenue", "awkward", "axiom", "azure")
-
-
-'''         
-         "bagpipes bandwagon banjo bayou beekeeper "
-         "bikini blitz blizzard boggle bookworm boxcar boxful buckaroo buffalo buffoon buxom buzzard buzzing "
-         "buzzwords caliph cobweb cockiness croquet crypt curacao cycle daiquiri dirndl disavow dizzying duplex "
+'''
          "dwarves embezzle equip espionage euouae exodus faking fishhook fixable fjord flapjack flopping fluffiness "
          "flyby foxglove frazzled frizzled fuchsia funny gabby galaxy galvanize gazebo giaour gizmo glowworm glyph "
          "gnarly gnostic gossip grogginess haiku haphazard hyphen iatrogenic icebox injury ivory ivy jackpot jaundice "
@@ -21,10 +20,65 @@ words = ("abruptly", "absurd", "abyss", "affix", "askew", "avenue", "awkward", "
          "youthful yummy zephyr zigzag zigzagging zilch zipper zodiac zombie")
 '''
 
-hangman = ((""
-           ""
-           ""
-           ""
-           ""
-           ""))
+hangman0 = (("   ______  \n"
+             "  |      | \n"
+             "         | \n"
+             "         | \n"
+             "         | \n"
+             "         | \n"
+             "         | \n"
+             "________/|_"))
 
+hangman1 = (("   ______  \n"
+             "  |      | \n"
+             "  O      | \n"
+             "         | \n"
+             "         | \n"
+             "         | \n"
+             "         | \n"
+             "________/|_"))
+
+hangman2 = (("   ______  \n"
+             "  |      | \n"
+             "  O      | \n"
+             "  |      | \n"
+             "  |      | \n"
+             "         | \n"
+             "         | \n"
+             "________/|_"))
+
+hangman3 = (("   ______  \n"
+             "  |      | \n"
+             "  O      | \n"
+             " /|      | \n"
+             "  |      | \n"
+             "         | \n"
+             "         | \n"
+             "________/|_"))
+
+hangman4 = (("   ______  \n"
+             "  |      | \n"
+             "  O      | \n"
+             " /|\     | \n"
+             "  |      | \n"
+             "         | \n"
+             "         | \n"
+             "________/|_"))
+
+hangman5 = (("   ______  \n"
+             "  |      | \n"
+             "  O      | \n"
+             " /|\     | \n"
+             "  |      | \n"
+             " /       | \n"
+             "         | \n"
+             "________/|_"))
+
+hangman6 = (("   ______  \n"
+             "  |      | \n"
+             "  O      | \n"
+             " /|\     | \n"
+             "  |      | \n"
+             " / \     | \n"
+             "         | \n"
+             "________/|_"))
